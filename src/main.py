@@ -16,6 +16,8 @@ from operations.router import router as router_operation
 from tasks.router import router as router_tasks
 from fastapi.middleware.cors import CORSMiddleware
 from pages.router import router as router_pages
+from chat.router import router as router_chat
+
 
 @asynccontextmanager
 async def lifespan(_: FastAPI) -> AsyncIterator[None]:
@@ -51,6 +53,7 @@ app.include_router(
 app.include_router(router_operation)
 app.include_router(router_tasks)
 app.include_router(router_pages)
+app.include_router(router_chat)
 
 origins = [
     "http://localhost",
