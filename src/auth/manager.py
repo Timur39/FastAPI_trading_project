@@ -9,11 +9,28 @@ SECRET = "SECRET"
 
 
 class UserManager(IntegerIDMixin, BaseUserManager[User, int]):
+    """
+    Класс для управления операциями пользователей с использованием BaseUserManager.
+
+    Атрибуты:
+    reset_password_token_secret: Секретный ключ для сброса паролей.
+    verification_token_secret: Секретный ключ для подтверждения пользователей.
+    """
+
     reset_password_token_secret = SECRET
     verification_token_secret = SECRET
 
     async def on_after_register(self, user: User, request: Optional[Request] = None):
-        print(f'User {user.id} has registered.')
+        """
+        Метод, вызываемый после регистрации пользователя.
+
+        Выводит сообщение о том, что пользователь зарегистрировался.
+
+        Параметры:
+        user (User): Пользователь, который зарегистрировался.
+        request (Optional[Request]): Объект запроса (необязательно).
+        """
+        print(f'Пользователь {user.id} зарегистрирован.')
 
     async def create(
             self,
@@ -21,6 +38,21 @@ class UserManager(IntegerIDMixin, BaseUserManager[User, int]):
             safe: bool = False,
             request: Optional[Request] = None,
     ) -> models.UP:
+        """
+        Метод для создания нового пользователя.
+
+        Проверяет пароль, проверяет, существует ли пользователь, создает словарь пользователя,
+        хэширует пароль, устанавливает идентификатор роли, создает пользователя в базе данных, вызывает
+        метод on_after_register и возвращает созданного пользователя.
+
+        Параметры:
+        user_create (schemas.UC): Данные пользователя для создания.
+        safe (bool): Флаг, указывающий, следует ли создавать безопасный словарь пользователя (необязательно, по умолчанию False).
+        request (Optional[Request]): Объект запроса (необязательно).
+
+        Возвращает:
+        models.UP: Созданный пользователь.
+        """
         await self.validate_password(user_create.password, user_create)
 
         existing_user = await self.user_db.get_by_email(user_create.email)

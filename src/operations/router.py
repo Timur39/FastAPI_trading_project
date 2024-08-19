@@ -16,12 +16,12 @@ router = APIRouter(
 @cache(expire=30)
 async def get_all_operations(session: AsyncSession = Depends(get_async_session)):
     try:
-        query = select(operation).where(operation.c.figi == 'string')
+        query = select(operation)
         result = await session.execute(query)
         data = result.all()
         return {
             "status": "success",
-            "data": list(map(lambda x: x._asdict(), data)),
+            "data": [i._asdict() for i in data],
             "details": None
         }
     except Exception as e:

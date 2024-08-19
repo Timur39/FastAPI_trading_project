@@ -12,9 +12,6 @@ class UserRead(schemas.BaseUser[int]):
     is_superuser: bool = False
     is_verified: bool = False
 
-    class ConfigDict:
-        from_attributes = True
-
 
 class UserCreate(schemas.BaseUserCreate):
     username: str

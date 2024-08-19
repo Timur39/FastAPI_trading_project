@@ -12,7 +12,7 @@ from src.database import Base
 from src.config import DB_HOST, DB_PORT, DB_USER, DB_PASS, DB_NAME
 from src.auth.models import metadata as auth_metadata
 from src.operations.models import metadata as operation_metadata
-from src.chat.models import *
+from src.chat.models import Base
 
 config = context.config
 
