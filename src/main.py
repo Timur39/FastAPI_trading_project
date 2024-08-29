@@ -2,26 +2,27 @@ from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from fastapi_cache import FastAPICache
 from fastapi_cache.backends.redis import RedisBackend
 from fastapi_users import FastAPIUsers
 from redis import asyncio as aioredis
 
-from fastapi.staticfiles import StaticFiles
 from auth.base_config import auth_backend
 from auth.manager import get_user_manager
 from auth.models import User
 from auth.schemas import UserRead, UserCreate
-from operations.router import router as router_operation
-from tasks.router import router as router_tasks
-from fastapi.middleware.cors import CORSMiddleware
-from pages.router import router as router_pages
 from chat.router import router as router_chat
+from config import REDIS_HOST, REDIS_PORT
+from operations.router import router as router_operation
+from pages.router import router as router_pages
+from tasks.router import router as router_tasks
 
 
 @asynccontextmanager
 async def lifespan(_: FastAPI) -> AsyncIterator[None]:
-    redis = aioredis.from_url("redis://localhost")
+    redis = aioredis.from_url(f"redis://{REDIS_HOST}:{REDIS_PORT}", encoding='utf-8')
     FastAPICache.init(RedisBackend(redis), prefix="fastapi-cache")
     yield
 
