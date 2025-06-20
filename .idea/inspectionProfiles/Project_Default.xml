@@ -24,7 +24,7 @@
     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredPackages">
         <value>
-          <list size="8">
+          <list size="85">
             <item index="0" class="java.lang.String" itemvalue="os" />
             <item index="1" class="java.lang.String" itemvalue="pyqt6-tools" />
             <item index="2" class="java.lang.String" itemvalue="operations" />
@@ -33,6 +33,83 @@
             <item index="5" class="java.lang.String" itemvalue="auth" />
             <item index="6" class="java.lang.String" itemvalue="uvloop" />
             <item index="7" class="java.lang.String" itemvalue="config" />
+            <item index="8" class="java.lang.String" itemvalue="httpx" />
+            <item index="9" class="java.lang.String" itemvalue="Babel" />
+            <item index="10" class="java.lang.String" itemvalue="PyYAML" />
+            <item index="11" class="java.lang.String" itemvalue="python-dateutil" />
+            <item index="12" class="java.lang.String" itemvalue="psycopg2-binary" />
+            <item index="13" class="java.lang.String" itemvalue="kombu" />
+            <item index="14" class="java.lang.String" itemvalue="pycparser" />
+            <item index="15" class="java.lang.String" itemvalue="rfc3986" />
+            <item index="16" class="java.lang.String" itemvalue="httptools" />
+            <item index="17" class="java.lang.String" itemvalue="redis" />
+            <item index="18" class="java.lang.String" itemvalue="tortoise-orm" />
+            <item index="19" class="java.lang.String" itemvalue="certifi" />
+            <item index="20" class="java.lang.String" itemvalue="pendulum" />
+            <item index="21" class="java.lang.String" itemvalue="vine" />
+            <item index="22" class="java.lang.String" itemvalue="passlib" />
+            <item index="23" class="java.lang.String" itemvalue="fastapi-cache2" />
+            <item index="24" class="java.lang.String" itemvalue="email-validator" />
+            <item index="25" class="java.lang.String" itemvalue="dnspython" />
+            <item index="26" class="java.lang.String" itemvalue="iniconfig" />
+            <item index="27" class="java.lang.String" itemvalue="cryptography" />
+            <item index="28" class="java.lang.String" itemvalue="orjson" />
+            <item index="29" class="java.lang.String" itemvalue="gunicorn" />
+            <item index="30" class="java.lang.String" itemvalue="attrs" />
+            <item index="31" class="java.lang.String" itemvalue="bcrypt" />
+            <item index="32" class="java.lang.String" itemvalue="fastapi_amis_admin" />
+            <item index="33" class="java.lang.String" itemvalue="sqlmodelx" />
+            <item index="34" class="java.lang.String" itemvalue="aioredis" />
+            <item index="35" class="java.lang.String" itemvalue="fastapi-admin" />
+            <item index="36" class="java.lang.String" itemvalue="fastapi-users-db-sqlalchemy" />
+            <item index="37" class="java.lang.String" itemvalue="async-generator" />
+            <item index="38" class="java.lang.String" itemvalue="httpcore" />
+            <item index="39" class="java.lang.String" itemvalue="PyJWT" />
+            <item index="40" class="java.lang.String" itemvalue="autoflake" />
+            <item index="41" class="java.lang.String" itemvalue="async-timeout" />
+            <item index="42" class="java.lang.String" itemvalue="pluggy" />
+            <item index="43" class="java.lang.String" itemvalue="cffi" />
+            <item index="44" class="java.lang.String" itemvalue="wcwidth" />
+            <item index="45" class="java.lang.String" itemvalue="click-didyoumean" />
+            <item index="46" class="java.lang.String" itemvalue="importlib-metadata" />
+            <item index="47" class="java.lang.String" itemvalue="Jinja2" />
+            <item index="48" class="java.lang.String" itemvalue="exceptiongroup" />
+            <item index="49" class="java.lang.String" itemvalue="pypika-tortoise" />
+            <item index="50" class="java.lang.String" itemvalue="sqlalchemy2-stubs" />
+            <item index="51" class="java.lang.String" itemvalue="celery" />
+            <item index="52" class="java.lang.String" itemvalue="pytzdata" />
+            <item index="53" class="java.lang.String" itemvalue="aiosqlite" />
+            <item index="54" class="java.lang.String" itemvalue="zipp" />
+            <item index="55" class="java.lang.String" itemvalue="prompt-toolkit" />
+            <item index="56" class="java.lang.String" itemvalue="sqladmin" />
+            <item index="57" class="java.lang.String" itemvalue="tomli" />
+            <item index="58" class="java.lang.String" itemvalue="itsdangerous" />
+            <item index="59" class="java.lang.String" itemvalue="sqlmodel" />
+            <item index="60" class="java.lang.String" itemvalue="billiard" />
+            <item index="61" class="java.lang.String" itemvalue="outcome" />
+            <item index="62" class="java.lang.String" itemvalue="websockets" />
+            <item index="63" class="java.lang.String" itemvalue="fastapi-users" />
+            <item index="64" class="java.lang.String" itemvalue="watchfiles" />
+            <item index="65" class="java.lang.String" itemvalue="six" />
+            <item index="66" class="java.lang.String" itemvalue="pyflakes" />
+            <item index="67" class="java.lang.String" itemvalue="pytest" />
+            <item index="68" class="java.lang.String" itemvalue="amqp" />
+            <item index="69" class="java.lang.String" itemvalue="iso8601" />
+            <item index="70" class="java.lang.String" itemvalue="aiofiles" />
+            <item index="71" class="java.lang.String" itemvalue="packaging" />
+            <item index="72" class="java.lang.String" itemvalue="pytest-asyncio" />
+            <item index="73" class="java.lang.String" itemvalue="python-multipart" />
+            <item index="74" class="java.lang.String" itemvalue="sortedcontainers" />
+            <item index="75" class="java.lang.String" itemvalue="sqlalchemy_database" />
+            <item index="76" class="java.lang.String" itemvalue="flower" />
+            <item index="77" class="java.lang.String" itemvalue="makefun" />
+            <item index="78" class="java.lang.String" itemvalue="WTForms" />
+            <item index="79" class="java.lang.String" itemvalue="importlib-resources" />
+            <item index="80" class="java.lang.String" itemvalue="click-repl" />
+            <item index="81" class="java.lang.String" itemvalue="pytz" />
+            <item index="82" class="java.lang.String" itemvalue="click-plugins" />
+            <item index="83" class="java.lang.String" itemvalue="fastapi_user_auth" />
+            <item index="84" class="java.lang.String" itemvalue="ujson" />
           </list>
         </value>
       </option>

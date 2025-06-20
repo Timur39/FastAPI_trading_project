@@ -5,8 +5,9 @@
       <excludeFolder url="file://$MODULE_DIR$/.venv/Include" />
       <excludeFolder url="file://$MODULE_DIR$/.venv/Lib" />
       <excludeFolder url="file://$MODULE_DIR$/.venv/Scripts" />
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.12 (FastAPI-project)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PackageRequirementsSettings">
